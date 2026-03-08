@@ -41,9 +41,6 @@ export default function LandingPage() {
             </div>
             <span className="text-white font-semibold">BimaSetu</span>
           </div>
-          <p className="text-sm">
-            Built for the AWS India AI Hackathon · Powered by Amazon Bedrock + Claude AI
-          </p>
           <p className="text-sm">© 2025 BimaSetu. All rights reserved.</p>
         </div>
       </footer>

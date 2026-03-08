@@ -18,12 +18,6 @@ export default function Navbar() {
         <Link href="#features" className="hover:text-gray-900 transition-colors">
           Features
         </Link>
-        <Link href="#how-it-works" className="hover:text-gray-900 transition-colors">
-          How it works
-        </Link>
-        <Link href="#cards" className="hover:text-gray-900 transition-colors">
-          Cards
-        </Link>
       </div>
 
       <div className="flex items-center gap-3">
