@@ -10,6 +10,8 @@ const nextConfig = {
     DYNAMODB_POLICY_TABLE: process.env.DYNAMODB_POLICY_TABLE,
     STORAGE_BIMASETU_BUCKET_NAME: process.env.STORAGE_BIMASETU_BUCKET_NAME,
     POLICY_PARSER_FUNCTION_NAME: process.env.POLICY_PARSER_FUNCTION_NAME,
+    APP_AWS_ACCESS_KEY_ID: process.env.APP_AWS_ACCESS_KEY_ID,
+    APP_AWS_SECRET_ACCESS_KEY: process.env.APP_AWS_SECRET_ACCESS_KEY,
   },
   experimental: {
     serverComponentsExternalPackages: [
