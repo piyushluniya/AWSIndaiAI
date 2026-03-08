@@ -21,19 +21,16 @@ export default function Hero() {
         </Badge>
 
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight mb-6">
-          Discover{" "}
+          Your Insurance,{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-700">
-            ₹1 Crore
+            Finally Working
           </span>{" "}
-          in Insurance
-          <br />
-          You Didn&apos;t Know You Had
+          For You
         </h1>
 
         <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Most Indians are sitting on lakhs of rupees in unused insurance benefits hidden in their
-          credit cards and policies. BimaSetu reveals, simplifies, and activates it all — in
-          minutes.
+          Discover hidden coverage, understand your policy, contest claim rejections, and get
+          emergency help — all in one place.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
