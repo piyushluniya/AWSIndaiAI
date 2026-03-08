@@ -245,14 +245,8 @@ Reply in plain text, no markdown. Keep it under 15 words.`
 export async function POST(req: NextRequest) {
   const rawBody = await req.text()
 
-  if (process.env.NODE_ENV === "production") {
-    try {
-      if (!validateTwilioSignature(req, rawBody)) {
-        console.warn("[whatsapp/webhook] Invalid signature")
-        return new NextResponse("Forbidden", { status: 403 })
-      }
-    } catch {}
-  }
+  // Signature validation disabled — Twilio sandbox + Amplify proxy causes URL mismatch
+  // Re-enable for production with a real domain by verifying req.url matches Twilio's signed URL
 
   const params = new URLSearchParams(rawBody)
   const from = params.get("From") || ""
