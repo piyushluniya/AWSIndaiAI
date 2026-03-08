@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from "next/server"
 import { DynamoDBClient, UpdateItemCommand } from "@aws-sdk/client-dynamodb"
+import { getAwsClientConfig } from "@/lib/aws-credentials"
 
-const dynamo = new DynamoDBClient({ region: process.env.AWS_REGION || "us-east-1" })
+const dynamo = new DynamoDBClient(getAwsClientConfig())
 const PROFILE_TABLE = process.env.DYNAMODB_PROFILE_TABLE!
 
 // POST /api/whatsapp/link

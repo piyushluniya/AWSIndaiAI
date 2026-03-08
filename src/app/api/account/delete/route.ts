@@ -4,8 +4,9 @@ import {
   ScanCommand,
   DeleteItemCommand
 } from "@aws-sdk/client-dynamodb"
+import { getAwsClientConfig } from "@/lib/aws-credentials"
 
-const dynamo = new DynamoDBClient({ region: process.env.AWS_REGION || "us-east-1" })
+const dynamo = new DynamoDBClient(getAwsClientConfig())
 
 const PROFILE_TABLE = process.env.DYNAMODB_PROFILE_TABLE!
 const POLICY_TABLE = process.env.DYNAMODB_POLICY_TABLE!
