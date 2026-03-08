@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from "next/server"
 import { DynamoDBClient, ScanCommand } from "@aws-sdk/client-dynamodb"
+import { getAwsClientConfig } from "@/lib/aws-credentials"
 
-const dynamo = new DynamoDBClient({ region: process.env.AWS_REGION || "us-east-1" })
+const dynamo = new DynamoDBClient(getAwsClientConfig())
 const PROFILE_TABLE = process.env.DYNAMODB_PROFILE_TABLE!
 
 // GET /api/whatsapp/status?phone=%2B919876543210
