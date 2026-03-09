@@ -24,7 +24,8 @@ const nextConfig = {
   serverExternalPackages: [
     "@aws-sdk/client-lambda",
     "@aws-sdk/client-bedrock-runtime",
-    "@aws-sdk/client-textract"
+    "@aws-sdk/client-textract",
+    "@aws-sdk/client-cognito-identity-provider"
   ]
 }
 
