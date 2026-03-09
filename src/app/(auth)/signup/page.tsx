@@ -30,6 +30,12 @@ function SignUpForm() {
     setLoading(true)
     try {
       await signUp({ username: email, password, options: { userAttributes: { email } } })
+      // Auto-confirm the account so users can sign in immediately (no email verification loop)
+      await fetch("/api/auth/confirm", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email })
+      })
       toast({ title: "Account created!", description: "You can now sign in." })
       router.push("/login")
     } catch (error: unknown) {
